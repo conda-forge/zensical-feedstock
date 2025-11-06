@@ -86,6 +86,8 @@ tests:
     requirements:
       run:
         - abi3audit
+  - script:
+      - zensical --version
 
 about:
   homepage: https://zensical.org
