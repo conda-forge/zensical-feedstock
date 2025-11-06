@@ -22,13 +22,12 @@ source:
 
 build:
   skip:
-    - win
     - not (match(python, python_min ~ ".*") and is_abi3)
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
       CARGO_PROFILE_RELEASE_LTO: fat
-      CARGO: cargo-auditable-wrapper
+      CARGO: cargo-auditable-wrapper${{ '' if unix else '.bat' }}
     content:
       - if: unix
         then:
