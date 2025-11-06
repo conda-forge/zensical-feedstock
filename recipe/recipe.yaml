@@ -21,6 +21,10 @@ source:
     file_name: LICENSE-lucide
 
 build:
+  python:
+    version_independent: true
+    entry_points:
+      - zensical=zensical.main:cli
   skip:
     - not (match(python, python_min ~ ".*") and is_abi3)
   script:
@@ -36,7 +40,7 @@ build:
           - copy %RECIPE_DIR%\cargo-auditable-wrapper.bat %BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat
       - python -m pip install . -vv
       - cargo-bundle-licenses --format yaml --output ./THIRD_PARTY.yml
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -85,6 +89,8 @@ tests:
     requirements:
       run:
         - abi3audit
+  - script:
+      - zensical --version
 
 about:
   homepage: https://zensical.org
