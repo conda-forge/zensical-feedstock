@@ -21,6 +21,8 @@ source:
     file_name: LICENSE-lucide
 
 build:
+  python:
+    version_independent: true
   skip:
     - not (match(python, python_min ~ ".*") and is_abi3)
   script:
@@ -66,7 +68,6 @@ requirements:
   ignore_run_exports:
     from_package:
       - cross-python_${{ target_platform }}
-      - python
 
 tests:
   - python:
