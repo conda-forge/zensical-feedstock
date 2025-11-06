@@ -23,6 +23,8 @@ source:
 build:
   python:
     version_independent: true
+    entry_points:
+      - zensical=zensical.main:cli
   skip:
     - not (match(python, python_min ~ ".*") and is_abi3)
   script:
