@@ -64,6 +64,7 @@ requirements:
     - pygments >=2.16
     - pymdown-extensions >=10.15
     - pyyaml >=6.0.2
+    - tomli >=2.0
   ignore_run_exports:
     from_package:
       - cross-python_${{ target_platform }}
