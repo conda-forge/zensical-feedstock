@@ -37,7 +37,7 @@ build:
           - copy %RECIPE_DIR%\cargo-auditable-wrapper.bat %BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat
       - python -m pip install . -vv
       - cargo-bundle-licenses --format yaml --output ./THIRD_PARTY.yml
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -75,6 +75,11 @@ tests:
         - zensical
       pip_check: true
       python_version: ${{ python_min }}.*
+  - package_contents:
+      site_packages:
+        - zensical/bootstrap/.github/workflows/docs.yml
+        - zensical-${{ version }}.dist-info/*
+
   - script:
       content:
         - if: win
