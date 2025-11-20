@@ -1,6 +1,6 @@
 context:
   name: zensical
-  version: "0.0.8"
+  version: "0.0.9"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 756e05278834b867c359000b0c7215df8925527a7c050e7362cd77373028a3ef
+    sha256: 5b41e2ddd2f19694e6fa6bb021a85095a09f7bd0afb7ea4ab694e73dcdc3d892
   # https://github.com/zensical/ui/issues/1
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: c6e9d82df957f1f6c57a2a5d22e079556c3ba1d296b5a99562d075332e1218e5
@@ -37,7 +37,7 @@ build:
           - copy %RECIPE_DIR%\cargo-auditable-wrapper.bat %BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat
       - python -m pip install . -vv
       - cargo-bundle-licenses --format yaml --output ./THIRD_PARTY.yml
-  number: 1
+  number: 0
 
 requirements:
   build:
