@@ -1,6 +1,6 @@
 context:
   name: zensical
-  version: "0.0.12"
+  version: "0.0.13"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: bac84c3494f75a37de2fc773ffdb6c5b2c88a39c840bf512bd7579b5dfd89dd2
+    sha256: 32c02827dc398cf0c860a8555de15a6d5c9a86e2c5761420e2e01967abd13b2f
   # https://github.com/zensical/ui/issues/1
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: c6e9d82df957f1f6c57a2a5d22e079556c3ba1d296b5a99562d075332e1218e5
