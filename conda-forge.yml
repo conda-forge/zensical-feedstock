@@ -13,3 +13,4 @@ conda_install_tool: pixi
 test: native_and_emulated
 bot:
   automerge: true
+  inspection: update-grayskull
