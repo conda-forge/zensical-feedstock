@@ -1,6 +1,6 @@
 context:
   name: zensical
-  version: "0.0.31"
+  version: 0.0.32
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 9c12f07bde70c4bfdb13d6cae1bedf8d18064d257a6e81128a152502b28a8fc3
+    sha256: 0f857b09a2b10c99202b3712e1ffc4d1d1ffa4c7c2f1aa0fafb1346b2d8df604
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: c6e9d82df957f1f6c57a2a5d22e079556c3ba1d296b5a99562d075332e1218e5
     file_name: LICENSE-zensical-ui
@@ -57,8 +57,8 @@ requirements:
     - click >=8.1.8
     - deepmerge >=2.0
     - markdown >=3.7
-    - pygments >=2.16
-    - pymdown-extensions >=10.15
+    - pygments >=2.20
+    - pymdown-extensions >=10.21.2
     - pyyaml >=6.0.2
     - tomli >=2.0
   ignore_run_exports:
@@ -91,7 +91,7 @@ tests:
 
 about:
   homepage: https://zensical.org
-  summary: 'A modern static site generator by the creators of Material for MkDocs'
+  summary: A modern static site generator by the creators of Material for MkDocs
   description: |
     Write your documentation in Markdown and create a professional static site for your Open Source or commercial project in minutes – searchable, customizable, more than 60 languages, for all devices.
   license: MIT
