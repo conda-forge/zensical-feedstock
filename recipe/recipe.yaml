@@ -1,6 +1,6 @@
 context:
   name: zensical
-  version: "0.0.39"
+  version: 0.0.40
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 2a8713c54362adb0881e9b0514b5ad9a696324756699dedb55fa1cbf3ccc0eda
+    sha256: 5c294751977a664614cb84e987186ad8e282af77ce0d0d800fe48ee57791279d
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: c6e9d82df957f1f6c57a2a5d22e079556c3ba1d296b5a99562d075332e1218e5
     file_name: LICENSE-zensical-ui
@@ -61,6 +61,7 @@ requirements:
     - pymdown-extensions >=10.21.2
     - pyyaml >=6.0.2
     - tomli >=2.4.0
+    - jinja2 >=3.1
   ignore_run_exports:
     from_package:
       - cross-python_${{ target_platform }}
