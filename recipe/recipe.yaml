@@ -1,6 +1,6 @@
 context:
   name: zensical
-  version: "0.0.52"
+  version: 0.0.53
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: b11b79dd1bb7da4c1a5293cbc5a2f4394d980bf2bf1c4c326062bc5ddcf2a2e8
+    sha256: 61672d3e6389822b5738e099816dbc07416ea84db67c2b1cb7e6ea977d2e04d7
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: ac044e6db7ba08069f635afc1759b0ae11a7d47f79144a4ccdd16fc94ba47d1e
     file_name: LICENSE-zensical-ui
@@ -58,7 +58,7 @@ requirements:
     - deepmerge >=2.0
     - markdown >=3.7
     - pygments >=2.20
-    - pymdown-extensions >=10.21.3
+    - pymdown-extensions >=11.0
     - pyyaml >=6.0.2
     - tomli >=2.4.0
     - jinja2 >=3.1
