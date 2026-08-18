@@ -1,14 +1,13 @@
 context:
-  name: zensical
-  version: "0.0.54"
+  version: "0.0.55"
 
 package:
-  name: ${{ name|lower }}
+  name: zensical
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 4de205dbb323d0a443e2ebf3fef77e93e3c1493c34a58d205e7f3631dd7745af
+  - url: https://pypi.org/packages/source/z/zensical/zensical-${{ version }}.tar.gz
+    sha256: adc4b5c963385ffa22b18b999c7cfb74689670170276fb1370fe70f78314b431
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: ac044e6db7ba08069f635afc1759b0ae11a7d47f79144a4ccdd16fc94ba47d1e
     file_name: LICENSE-zensical-ui
@@ -62,16 +61,15 @@ requirements:
     - pyyaml >=6.0.2
     - tomli >=2.4.0
     - jinja2 >=3.1
-  ignore_run_exports:
-    from_package:
-      - cross-python_${{ target_platform }}
 
 tests:
   - python:
       imports:
         - zensical
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - package_contents:
       site_packages:
         - zensical/bootstrap/.github/workflows/docs.yml
@@ -80,10 +78,8 @@ tests:
   - script:
       content:
         - if: win
-          then: abi3audit %PREFIX%/Lib/site-packages/zensical/zensical.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
-          else:
-            - export SP_DIR=$(python -c "import site; print(site.getsitepackages()[0])")
-            - abi3audit $SP_DIR/zensical/zensical.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
+          then: abi3audit %SP_DIR%\zensical\zensical.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
+          else: abi3audit $SP_DIR/zensical/zensical.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
     requirements:
       run:
         - abi3audit
