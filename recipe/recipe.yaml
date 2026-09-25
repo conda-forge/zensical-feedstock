@@ -1,5 +1,5 @@
 context:
-  version: "0.0.64"
+  version: 0.0.65
 
 package:
   name: zensical
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/z/zensical/zensical-${{ version }}.tar.gz
-    sha256: df76e63bbe25794c41ad99c9e48d4e5ad9827f5f98535cceae9190c46d1a7e31
+    sha256: 35620265949eb426ebb4339bd091bed9a05648f28d52e61a79922ee1b109d9ab
   - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
     sha256: ac044e6db7ba08069f635afc1759b0ae11a7d47f79144a4ccdd16fc94ba47d1e
     file_name: LICENSE-zensical-ui
@@ -61,7 +61,7 @@ requirements:
     - pyyaml >=6.0.2
     - tomli >=2.4.0
     - jinja2 >=3.1
-
+    - pathspec >=1.0.4
 tests:
   - python:
       imports:
@@ -69,7 +69,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - package_contents:
       site_packages:
         - zensical/bootstrap/.github/workflows/docs.yml
