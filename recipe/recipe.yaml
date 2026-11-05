@@ -8,9 +8,6 @@ package:
 source:
   - url: https://pypi.org/packages/source/z/zensical/zensical-${{ version }}.tar.gz
     sha256: 0715bae72a1acb0164eb06f489d6bb93bb3e0fbcf786fa8259daae5955611526
-  - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
-    sha256: ac044e6db7ba08069f635afc1759b0ae11a7d47f79144a4ccdd16fc94ba47d1e
-    file_name: LICENSE-zensical-ui
 
 build:
   python:
@@ -105,13 +102,6 @@ about:
   license_file:
     - LICENSE.md
     - THIRD_PARTY.yml
-    - python/zensical/templates/.icons/fontawesome/LICENSE.txt
-    - python/zensical/templates/.icons/material/LICENSE
-    - python/zensical/templates/.icons/octicons/LICENSE
-    - python/zensical/templates/.icons/simple/LICENSE.md
-    - python/zensical/templates/.icons/lucide/LICENSE
-    - python/zensical/templates/assets/javascripts/LICENSE
-    - LICENSE-zensical-ui
   documentation: https://zensical.org
   repository: https://github.com/zensical/zensical
 
