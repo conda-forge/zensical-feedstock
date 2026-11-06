@@ -1,5 +1,5 @@
 context:
-  version: "0.0.73"
+  version: 0.1.0
 
 package:
   name: zensical
@@ -7,10 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/z/zensical/zensical-${{ version }}.tar.gz
-    sha256: ddeca0695e1015a4fbd09b9a9e50e77a2bb43753bf7479dfb23255f35fd14450
-  - url: https://raw.githubusercontent.com/zensical/ui/refs/heads/master/LICENSE
-    sha256: ac044e6db7ba08069f635afc1759b0ae11a7d47f79144a4ccdd16fc94ba47d1e
-    file_name: LICENSE-zensical-ui
+    sha256: 0715bae72a1acb0164eb06f489d6bb93bb3e0fbcf786fa8259daae5955611526
 
 build:
   python:
@@ -64,7 +61,6 @@ requirements:
   run:
     - python
     - click >=8.1.8
-    - deepmerge >=2.0
     - markdown >=3.7
     - pygments >=2.20
     - pymdown-extensions >=11.0
@@ -72,6 +68,7 @@ requirements:
     - tomli >=2.4.0
     - jinja2 >=3.1
     - pathspec >=1.0.4
+    - zensical-ui ==0.0.41
 tests:
   - python:
       imports:
@@ -105,13 +102,6 @@ about:
   license_file:
     - LICENSE.md
     - THIRD_PARTY.yml
-    - python/zensical/templates/.icons/fontawesome/LICENSE.txt
-    - python/zensical/templates/.icons/material/LICENSE
-    - python/zensical/templates/.icons/octicons/LICENSE
-    - python/zensical/templates/.icons/simple/LICENSE.md
-    - python/zensical/templates/.icons/lucide/LICENSE
-    - python/zensical/templates/assets/javascripts/LICENSE
-    - LICENSE-zensical-ui
   documentation: https://zensical.org
   repository: https://github.com/zensical/zensical
 
