@@ -1,5 +1,5 @@
 context:
-  version: 0.1.0
+  version: 0.1.1
 
 package:
   name: zensical
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/z/zensical/zensical-${{ version }}.tar.gz
-    sha256: 0715bae72a1acb0164eb06f489d6bb93bb3e0fbcf786fa8259daae5955611526
+    sha256: 0405d2891dca76a6fb42fae8141dba93a95f31905148940a9f13883bf1ccfe43
 
 build:
   python:
@@ -68,7 +68,7 @@ requirements:
     - tomli >=2.4.0
     - jinja2 >=3.1
     - pathspec >=1.0.4
-    - zensical-ui ==0.0.41
+    - zensical-ui ==0.0.42
 tests:
   - python:
       imports:
