@@ -1,5 +1,5 @@
 context:
-  version: 0.1.1
+  version: "0.1.2"
 
 package:
   name: zensical
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/z/zensical/zensical-${{ version }}.tar.gz
-    sha256: 0405d2891dca76a6fb42fae8141dba93a95f31905148940a9f13883bf1ccfe43
+    sha256: 733c8bd5204c8fa5fbff9b0a3caa7fe134f711130cc343d26f386ac7d29d05bd
 
 build:
   python:
